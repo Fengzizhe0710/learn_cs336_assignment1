@@ -161,3 +161,7 @@ cython_debug/
 
 .ruff_cache/
 *.zip
+
+# 保留 data/ 目录结构，不上传语料
+data/**
+!data/.gitkeep
