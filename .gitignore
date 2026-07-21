@@ -164,4 +164,8 @@ cython_debug/
 
 # 保留 data/ 目录结构，不上传语料
 data/**
-!data/.gitkeep
+!data/.
+
+model/**/*.pkl
+model/**/*.pickle
+!model/**/.gitkeep
