@@ -23,9 +23,9 @@ class Tokenizer:
             merges: BPE 合并规则表
             special_tokens: 特殊 token 列表
         """
-        self.vocab = Dict(vocab)
-        self.merges = List(merges)
-        self.special_tokens = List(special_tokens) if special_tokens else []
+        self.vocab = dict(vocab)
+        self.merges = list(merges)
+        self.special_tokens = list(special_tokens) if special_tokens else []
 
         # 构建字节序列到 token id 的映射
         self.byte_to_rank: Dict[bytes, int] = {}
