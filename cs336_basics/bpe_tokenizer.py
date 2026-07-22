@@ -139,6 +139,7 @@ class Tokenizer:
             # 如果片段是特殊token，直接添加其ID
             if segment in self.special_token_ids:
                 result.append(self.special_token_ids[segment])
+                continue
                 
             # 预分词
             for match in PAT.finditer(segment):
