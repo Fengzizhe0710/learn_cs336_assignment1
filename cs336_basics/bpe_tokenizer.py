@@ -72,7 +72,7 @@ class Tokenizer:
 
         return cls(vocab, merges, special_tokens)
 
-    def _encode_bytees(self, word_bytes: bytes) -> List[int]:
+    def _encode_bytes(self, word_bytes: bytes) -> List[int]:
         """
         对字节串应用 BPE 编码
         """
@@ -148,7 +148,7 @@ class Tokenizer:
                 if word_bytes in self.byte_to_rank:
                     result.append(self.byte_to_rank[word_bytes])
                 else:
-                    result.extend(self._encode_bytees(word_bytes))
+                    result.extend(self._encode_bytes(word_bytes))
 
         return result
 
