@@ -95,7 +95,7 @@ class Tokenizer:
                 break
 
             merged = tokens[best_idx] + tokens[best_idx + 1]
-            tokens[:best_idx] + [merged] + tokens[best_idx + 2:]
+            tokens = tokens[:best_idx] + [merged] + tokens[best_idx + 2:]
 
         result: List[int] = []
         for token in tokens:
